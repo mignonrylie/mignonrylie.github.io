@@ -6,23 +6,9 @@ function setup() {
 	centerY = windowHeight/2;
 	rectMode(CENTER);
 
-
-	p5.board();
-	
-	// serial = p5.serial();
-	// serial.list()
-
-	// b = p5.board('COM3', 'arduino');
-	// pin = b.pin(9, 'DIGITAL', 'OUTPUT');
-	// pin.write('HIGH');
 	levelOne();
 
 }
-
-function mousePressed() {
-	pin.write('HIGH');
-}
-
 
 function draw() {
 	background(50);
