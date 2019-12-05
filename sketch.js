@@ -5,7 +5,8 @@ function setup() {
 	centerX = windowWidth/2;
 	centerY = windowHeight/2;
 	rectMode(CENTER);
-
+	beginning = 1;
+	end = 0;
 	levelOne();
 
 }
@@ -15,18 +16,23 @@ function draw() {
 	textFont("Courier New", 25);
 	textAlign(CENTER, CENTER);
 
+	if(beginning) {
+		rect(centerX, centerY, windowWidth*0.75, windowHeight*0.75) // Splash box
+		text("Welcome to my project! Tap anywhere on the screen to begin.", centerX, centerY, windowWidth*0.75, windowHeight*0.75) //splash text
+	} else if(!end) {
+		rect(centerX, centerY/2, windowWidth - 2*windowWidth/5, windowHeight/3) // Question box
+		text(q[i], centerX, centerY/2, windowWidth - 2*windowWidth/5, windowHeight/2 - 200); // Question text
 
-	// TODO: Add "splash screen", require interaction to enter the first level
+		rect(centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Answer 1 box
+		text(a1[i], centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Question text
 
+		rect(3*centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Answer 2 box
+		text(a2[i], 3*centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Question text
+	} else {
+		//end code here
+	}
 
-	rect(centerX, centerY/2, windowWidth - 2*windowWidth/5, windowHeight/3) // Question box
-	text(q[i], centerX, centerY/2, windowWidth - 2*windowWidth/5, windowHeight/2 - 200); // Question text
-
-	rect(centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Answer 1 box
-	text(a1[i], centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Question text
-
-	rect(3*centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Answer 2 box
-	text(a2[i], 3*centerX/2, 3*centerY/2, windowWidth/3, windowHeight/3); // Question text
+		
 }
 
 function levelOne() {
@@ -106,18 +112,26 @@ function keyPressed() {
 	switch(keyCode) {
 		case LEFT_ARROW:
 			answer = 1
-			//lightUp()
 			i++;
 			redraw();
 			break;
 		case RIGHT_ARROW:
 			answer = 2
-			//lightUp()
 			i++;
 			redraw();
 			break;
 		default:
 	}
+}
+
+function touchStarted() {
+	if (beginning) {
+		beginning = 0;
+	} else {
+		i++;
+	}
+	redraw();
+	return false;
 }
 
 function windowResized() {
