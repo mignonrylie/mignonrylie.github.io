@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	print(windowWidth);
