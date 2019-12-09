@@ -24,6 +24,11 @@ function touchStarted() {
 	return false; //necessary to prevent default behavior
 }
 
+function mousePressed() {
+	checkPart();
+	return false;
+}
+
 function checkPart() {
 
 	switch (part) {
@@ -174,6 +179,11 @@ function checkPart() {
 
 
 function touchEnded() {
+	redraw();
+	i++;
+}
+
+function mouseReleased() {
 	redraw();
 	i++;
 }
