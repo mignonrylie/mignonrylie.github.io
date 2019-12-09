@@ -1,15 +1,15 @@
 function setup() {
 	canvas = createCanvas(windowWidth, windowHeight);
-	canvas.style('display', 'block');
-	noLoop();
+	canvas.style('display', 'block'); //disables scrollbar or something
+	noLoop(); //disables automatic drawing
+
 	centerX = windowWidth/2;
 	centerY = windowHeight/2;
 	rectMode(CENTER);
 
 	bg = Math.floor(Math.random() * 255); //random background shade, for fun!
 
-	answers = []; //Might not use?
-
+	//initialize question text
 	q = ["Hi! Welcome to Rylie Johnson's EGR101 project! This \"game\" will take you through what I envision for my future as an engineer. You'll be presented with a scenario, and two choices. Neither choice is \"right\" or \"wrong\", but one of them is closer to MY definition of a successful engineer. This is a touchscreen, so you can just tap your choice! If you aren't using a touchscreen computer, clicking will work too :)"];
 	//a = ["You shouldn't see this."];
 	//b = ["You shouldn't see this."];
@@ -17,34 +17,21 @@ function setup() {
 	part = 0;
 	splash = 1;	
 	i = 0;
-
-	taps = 0;
 }
 
-//make this program repeat for use over and over in class! Fix part 0 bug.
-//when correct answer is tapped, turn on loop() and color the answer they chose.
-
 function touchStarted() {
-	taps++; //just keeping track of how many times the screen has been tapped.
-
-	checkPart();
-
+	checkPart(); //decides when to "advance" to a new part
 	return false; //necessary to prevent default behavior
 }
 
 function checkPart() {
-	//if, say, we're at the beginning, just go ahead to the next part.
-	//if we're inside a part with many steps, increase i.
 
 	switch (part) {
 		case 0:
-			q = ["Hi! Welcome to Rylie Johnson's EGR101 project! This \"game\" will take you through what I envision for my future as an engineer. You'll be presented with a scenario, and two choices. Neither choice is \"right\" or \"wrong\", but one of them is closer to MY definition of a successful engineer. This is a touchscreen, so you can just tap your choice! If you aren't using a touchscreen computer, clicking will work too :)"];
-			//a = ["You shouldn't see this."];
-			//b = ["You shouldn't see this."];
-				splash = 1;
-				part++;
-				i = 0;
-				checkPart();
+			splash = 1;
+			part++;
+			i = 0;
+			checkPart(); //moves on from part 0.
 			break;
 
 		case 1:
@@ -196,7 +183,7 @@ function draw() {
 	textFont("Courier New", 25);
 	textAlign(CENTER, CENTER);
 
-	if(splash) { //make the text here a variable
+	if(splash) {
 		rect(centerX, centerY, windowWidth*0.75, windowHeight*0.75) // Splash box
 		text(q[i], centerX, centerY, (windowWidth*0.75)*0.8, windowHeight*0.6) //splash text
 	} else {
