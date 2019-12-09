@@ -167,7 +167,7 @@ function checkPart() {
 			"Part 2: What is your \"road map\" for becoming a successful engineer?\n I want to spend time working on all kinds of personal projects. Not only is it fun, but I'll also be improving as a programmer. I'll be looking into jobs pretty soon, and I want to work in some STEM field. It'll be likely to interest me more, and it'll help me when I graduate and look for a full-time gig! I'm also going to look into internships and networking. That way, I'll know about everything that's available to me, and they'll be thinking of me when it comes time to hire.",
 			"Part 3: How do you define what it means to be a successful engineer?\n I think successful engineers never stop learning. It helps you do better in your field, it keeps you engaged, and it's just fun! More importantly, though, a successful engineer HAS to stand up for what's right. I won't be able to go to bed if I know that my work has hurt or taken advantage of people, and any decent engineer will refuse to let that happen. Overall, a successful engineer is always pushing themselves to be better. I want to do that through learning constantly, and only doing work that will benefit the world, never hurt it.",
 			"Part 4: What do you want to do as a successful engineer?\n No matter where I end up, I want to enjoy my work. I want to look forward to work each day, and I want to finish each day satisfied, not exhausted. I also want to help people as much as possible. I know computer science isn't the most direct field to help people in, but any way that I can brighten someone else's day will brighten my own. Finally, I want to help advance the scientific world; it's a huge dream of mine to discover or pioneer something groundbreaking. My true love is really physical chemistry, and I want to use my skills in computer science to answer our biggest questions about it.",
-			"That's all! Thank you for looking at my project :) Please click to reset."];
+			"That's all! Thank you for looking at my project :) Please tap or click to reset."];
 
 
 			//Delete the following?
@@ -175,7 +175,7 @@ function checkPart() {
 			//	b = ["Holder text"];
 
 			if (i === q.length) {
-				location.reload(true);
+				location.reload();
 			}
 			break;
 
