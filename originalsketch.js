@@ -184,3 +184,174 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function touchStarted() {
+	testx = touches[0].x;
+	testy = touches[0].y;
+	print(i);
+	touchAction();
+}*/
+
+/*function touchAction() {
+	//Calulates the 'answer'.
+	
+
+	if ((testx > (centerX/2 - windowWidth/6)) && testx < (centerX/2 + windowWidth/6) && testy < (3*centerY/2 + windowHeight/6) && testy > (3*centerY/2 - windowHeight/6)) {
+		//left: centerX/2 - windowWidth/3
+		//right: centerX/2 + windowWidth/3
+		//up: 3*centerY/2 + windowHeight/3
+		//down:  3*centerY/2 - windowHeight/3
+		answers.push("A");
+		
+	} else if ((testx > (3*centerX/2 - windowWidth/6)) && testx < (3*centerX/2 + windowWidth/6) && testy < (3*centerY/2 + windowHeight/6) && testy > (3*centerY/2 - windowHeight/6)) {
+		//left: 3*centerX/2 - windowWidth/3
+		//right: 3*centerX/2 + windowWidth/3
+		//up: 3*centerY/2 + windowHeight/3
+		//down:  3*centerY/2 - windowHeight/3
+		answers.push("B");
+	}
+
+	//determines when to move to the next part.
+	switch (part) {
+		case 0:
+			part++;
+
+			if (i === q.length) {
+				i = 0;
+				splash = 0;
+			} else {
+				i++;
+			}
+
+			break;
+
+
+
+		case 1:
+			if (i === 0) {
+				splash = 0;
+			}
+			//text for part 1
+			q = ["Splash text",
+			"I’ve finally started at the UK college of Engineering! It’s all really exciting; I dream about all the possibilities that lie ahead! But first... I have to pass this calculus class.",
+			"Woohoo! We’ve finally gotten through midterms, and my friends want to celebrate. I have this one last project due Monday, though, and I’ve hardly started.",
+			"It's the end of class, and your groupmates are discussing hanging out together afterwards. You'd planned on just going back to the dorm and relaxing, but they invite you to join them."];
+
+			a = ["Holder text",
+			"I’ve already taken this class, I feel pretty confident!",
+			"I should relax! I’ll go out and party with my friends, I’ll find the time to finish the project.",
+			"I'm pretty tired right now, and we've never spent time together outside class - what if it's weird? I'll apologize and decline the invitation, and just head back on my own."];
+
+			b = ["Holder text",
+			"I’ll brush up on the material just to be safe.",
+			"I’ll work on the project first. I can chill out once I’ve finished everything.",
+			"I'm pretty tired, but we always have so much fun together in class! I should make myself go out and join them; it could be a lot of fun!"];
+			//Level 1: Successful student.
+	// -	(Be able to grow personally at the same time as I learn academically.)
+	// -	(Exploring all kinds of different things, being open minded, and maybe finding my niche.)
+	// -	Keep my engineering friends and make even more along the way.
+			if (i === q.length) {
+				part++;
+				i = 0;
+			} else {
+				i++;
+			}
+			break;
+
+
+
+		case 2:
+			//text for part 2
+			q = ["There's an engineering job and internship fair tonight, but my resume isn't finished and I'm not sure who I should even be looking for there."];
+
+			a = ["	"];
+
+			b = [];
+			// Level 2: Road map to becoming an engineer.
+	// -	Keep practicing programming. Learn about the new techniques I’m interested in. Work on personal projects for the sake of learning and fun. 
+	// Make engineering contacts, try and get to know about opportunities in relevant fields. 
+	// -	Get a job and learn how to be more independent. Try to get a job in a STEM-related field, like tutoring or being a TA; it’ll be relevant and I’ll enjoy it more. 
+
+			//only increase if ready
+			break;
+
+
+
+		case 3:
+			//text for part 3
+			q = [];
+			a = [];
+			b = [];
+			// Level 3: What a successful engineer is!
+	// -	I want to be happy and fulfilled; feel like I’m making a difference. 
+	// -	Do work that matters and that I enjoy. Be important to society, not to a company. 
+	// -	Always be learning something new.
+	// -	ALWAYS DO THE RIGHT THING!!!!
+			//only increase if ready
+			break;
+
+
+
+		case 4:
+			//text for part 4
+			q = [];
+			a = [];
+			b = [];
+			// Level 4: What I want to do as a successful engineer!
+// -	Have fun writing programs. 
+// -	Create software that helps people out. Keep learning. 
+// -	Help advance the field of either machine learning or quantum computing. 
+// -	Finish work happy, not exhausted.
+			//only increase if ready
+
+
+
+		case 5:
+			//ending
+	}
+}*/
+
+
+
