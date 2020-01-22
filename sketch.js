@@ -1,5 +1,7 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.style('display', 'block');
+
   x = 1;
   numPlants = 20;
   
@@ -39,7 +41,7 @@ function draw() {
   wiggleStrength = lerp(wiggleStrength, goalwiggleStrength, 0.05);
   
   for(let i = 0; i < numPlants; i++) {
-    for(y = windowHeight; y > heights[i]; y = y - 5) {
+    for(y = windowHeight; y > heights[i]; y = y - 3) {
         fill(0, greens[i], 0);
       circle(bases[i] + wiggleStrength*sin(0.1*(x+y)*wiggles[i]), y, 20);
     }
